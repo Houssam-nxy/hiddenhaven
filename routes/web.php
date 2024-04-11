@@ -22,7 +22,14 @@ Route::get('/', function () {
 Route::get('/pictures', [NavbarController::class, 'pictures'])->middleware(['auth'])->name('pictures');
 Route::get('/docs', [NavbarController::class, 'docs'])->middleware(['auth'])->name('docs');
 
-Route::resource('/info', CrudController::class)->middleware(['auth']);
-
+Route::resource('/info', CrudController::class)->middleware(['auth'])->names([
+    'index' => 'info.index',
+    'create' => 'info.create',
+    'store' => 'info.store',
+    'show' => 'info.show',
+    'edit' => 'info.edit',
+    'update' => 'info.update',
+    'destroy' => 'info.destroy',
+]);
 
 require __DIR__.'/auth.php';
