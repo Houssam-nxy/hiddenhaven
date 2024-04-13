@@ -1,7 +1,3 @@
-Absolutely! Here's a revised version tailored for GitHub:
-
----
-
 # Confidentiality Management System
 
 ## Overview
